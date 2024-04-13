@@ -1,1 +1,5 @@
-/tests/*
+/**/*.log
+/**/*.lock
+**/__pycache__/
+**/.pytest_cache__/
+.vscode/

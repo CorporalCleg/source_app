@@ -2,7 +2,7 @@ import socket
 
 class server:
 
-    def __init__(self, ip_addr='0.0.0.0', port=9091):
+    def __init__(self, ip_addr='0.0.0.0', port=9090):
         self.server = socket.socket()
         self.ip_addr = ip_addr
         self.port = port
@@ -10,6 +10,7 @@ class server:
         self.server.listen(2)
 
     def recv_commands(self):
+        print('call')
         try:
             conn, _ = self.server.accept()
             data = conn.recv(2056).decode()
